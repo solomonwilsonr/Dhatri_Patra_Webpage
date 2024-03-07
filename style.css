@@ -4,12 +4,45 @@
  box-sizing: border-box;
  font-family: 'Poppins', sans-serif;
 }
+* {
+    box-sizing: border-box;
+  }
 
 body {
     background-color: white;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+  }
+.container1 {
+    margin: 0px;
 }
 
 nav {
+    border-radius: 5px;
     height: 80px;
     background: black;
     display: flex;
@@ -60,18 +93,18 @@ nav ul li a.active{
 }
 
 .hero {
-    margin-top: 120px;
+    margin-top: 0px;
     margin-right: 20px;
     margin-left: 20px;
     background-color: greenyellow;
-    height: 650px;
+    height: 800px;
     display: flex;
     justify-content: space-between;
 
 }
 
 .hero-sec {
-    background: black;
+    background: white;
     width: 75%;
 }
 
@@ -100,12 +133,14 @@ nav ul li a.active{
     color: white;
     border: 2px solid white;
 }
+
 .hero-sec p {
     font-size: 70px;
     /* font-weight: bold; */
     padding-left: 100px;
-    padding-top: 50px;
-    color: white;
+    padding-top: 150px;
+    color: black;
+    font-weight: bold;
 
 }
 
@@ -121,18 +156,9 @@ nav ul li a.active{
 .hero-image {
     width: 50%;
     cursor: pointer;
-    margin: 10px;
+   
 }
 
-.image-fade{
-    opacity: 0.90;
-	transition: 1s all ease-in-out;
-	-moz-transition: 1s all ease-in-out;
-	-webkit-transition: 1s all ease-in-out;
-}
-.image-fade.active {
-	opacity: 1.00;
-}
 
 .signup {
     background-color: #fff;
@@ -141,29 +167,286 @@ nav ul li a.active{
     margin-top: 120px;
 }
 
-@media (max-width: 950px) {
-    nav ul {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        background: #111;
-        height: 100vh;
-        width: 100%;
-        display: block;
-        text-align: center;
-    }
-
-    nav ul li{
-        margin: 40px o;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-        display: block;
-    }
-
-    nav ul li a:hover, 
-    nav ul li a.active{
-    color: cyan;
-    }
+/* section2 */
+.section2 {
+    display: flex;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+    background: black;
 }
+.firstbox {
+    display: flex;
+    width: 55%;
+    margin-left: 60px;
+    margin-right: 40px;
+    gap: 160px;
+    
+}
+
+.firstbox h1{
+    font-size: 100px;
+}
+
+
+
+.div1 {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+
+.div2 {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.div3 {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.image-div {
+    margin-top: 30px;
+    border-radius: 5px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url("https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; /* Ensures the background image covers the entire div */
+    height: 850px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 1; /* Adjust the opacity value as needed */
+    filter: grayscale(20%) contrast(120%) brightness(90%);
+}
+
+.content {
+    position: relative;
+    top: 120px;
+    left: 400px;
+    color: white; /* Adjust text color as needed */
+    width: 50%;
+    height: 2000px; /* Adjust the height value as needed */
+    overflow: hidden; /* Optional: Ensure the content doesn't overflow */
+    z-index: 1; /* Ensure the element is positioned above the image */
+    margin-bottom: 50px;
+    border-radius: 4px;
+    
+}
+
+.image-div-main {
+    display: flexbox;
+    flex-direction: row;
+}
+
+.image-div1 {
+    background-image: url("https://images.unsplash.com/flagged/photo-1574097656146-0b43b7660cb6?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");   
+    height: 300px;
+    background-size: cover; /* Adjusts the background image size to cover the entire div */
+    background-position: top; /* Positions the background image at the top */
+
+}
+
+
+.image-div2{
+    background: black;
+    height: 300px;
+    display: flex;
+}
+
+.image-div2-1 {
+    width: 50%;
+    font-size: 40px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#button-div {
+    
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #000;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 5px 20px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);   
+}
+
+#button-div:hover{
+    background: rgb(251, 193, 245);
+}
+
+.highlight-1{
+    font-weight: bold;
+    
+}
+
+.highlight-2 {
+    margin-top: 8px;
+    font-weight: light;
+    font-size: 18px;
+}
+
+.text-image {
+font-size: px;
+justify-content: center;
+margin-left: 30px;
+animation: typing 4s steps(18), blink .6s step-end infinite alternate;
+}
+
+
+.image-div2-2 {
+    background: white;
+    width: 50%;
+}
+
+
+
+
+
+
+
+.accordinsection {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 70px;
+    display: flex;
+    margin-top: px;
+}
+
+.accordinsection-1 {
+    width: 30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.90)), url('https://images.unsplash.com/photo-1512728881812-4690c2953d4f?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    filter: grayscale(20%) contrast(120%) brightness(90%);
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+
+}
+.accordinsection-1 p{
+    margin-top: 130px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.accordinsection-2 {
+    width: 70%;
+}
+
+.accordion {
+    height: 100px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:before {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+.active:before {
+    content: '\2212';
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+.container-scroll-main {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    position: relative;
+    background: black;
+}
+.container-scroll {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+  
+  .scrolling-text {
+    position: absolute;
+    display: inline-block;
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    will-change: transform;
+    backface-visibility: hidden;
+    overflow: hidden; /* Ensure content doesn't overflow */
+     z-index: 1;
+  }
+  
+  .scrolling-text .scrolling-text-content {
+    position: relative;
+    color: white;
+    font-size: 100px;
+    font-weight: lighter;
+    white-space: nowrap;
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    line-height: 1em;
+    margin: 50px 0;
+  } 
+
+  /* iframe {
+    margin-left: calc(50% - 200px); 
+    width: 400px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+} */
+
+/* @media only screen and (max-width: 612px) {
+    iframe {
+        margin-left: 0;
+        width: 100%; 
+} */
+
+iframe {
+    margin-left: 350px;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: none;
+}
+
+  .instagram {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.90)), url('https://media.licdn.com/dms/image/D5612AQF9AoGwvDUBKg/article-cover_image-shrink_720_1280/0/1701417551500?e=2147483647&v=beta&t=SpRbYmYnGL6Ty7ZvKUM7urRIdY4F6z-Vnor3GerAluA');
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
