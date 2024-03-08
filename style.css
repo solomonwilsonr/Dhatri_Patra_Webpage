@@ -53,6 +53,8 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000; 
+    border-bottom: 3px solid black;
 
     /* margin: 10px;
     position: fixed; 
@@ -67,6 +69,8 @@ nav .logo {
     font-size: 33px;
     color: black;
     font-weight: 600;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 nav ul {
@@ -97,14 +101,39 @@ nav ul li a.active{
     color: grey;
 }
 
+
+
+/* marq text */
+
+.container-mar{
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: -50px;
+    margin-left: 30px;
+    margin-right: 30px;   
+    background: yellowgreen;
+    border-bottom: 3px solid white;
+  
+}
+
+.container-mar marquee{
+    overflow: hidden;     
+    font-size: 40px;
+
+  }
+
 .hero {
     border-radius: 20px;
-    margin: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
     /* margin-right: 20px;
     margin-left: 20px; */
     height: 800px;
     display: flex;
     justify-content: space-between;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+
 
 }
 
@@ -117,29 +146,40 @@ nav ul li a.active{
 }
 
 .button1 {
-    margin-top: 10px;
-    margin-left: 70px;
-    padding-left: 0px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-    border: 1px;
-    background: white;
-    color: black;
+    margin-left: 50px;
+    margin-top: 30px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #000;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 5px 20px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);   
 }
 .button2{
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-   
-    border: 1px;
-    background: black;
-    color: white;
-    border: 2px solid white;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #000;
+    background: yellowgreen;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 5px 20px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);   
 }
 
 .hero-sec p {
@@ -298,7 +338,7 @@ nav ul li a.active{
     border: 2px solid #000;
     border-radius: 3px;
     color: #000;
-    background: #fff;
+    background: #ffffff;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
@@ -309,8 +349,14 @@ nav ul li a.active{
     transition-timing-function: cubic-bezier(.4,0,.2,1);   
 }
 
-#button-div:hover{
+
+#button-div:hover,
+.button1:hover{
     background: rgb(251, 193, 245);
+}
+
+.button2:hover{
+    background: rgb(163, 218, 44);
 }
 
 .highlight-1{
@@ -333,18 +379,29 @@ animation: typing 4s steps(18), blink .6s step-end infinite alternate;
 
 
 .image-div2-2 {
-    background: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url("https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     width: 50%;
+    background-size: cover; /* Adjusts the background image to cover the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
+}
+
+.highlight-1 i{
+    color: palevioletred;
 }
 
 
 
-
-
-
+.accord-main {
+    padding-top: 0px;
+    background-color: black;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 150px;
+}
 
 .accordinsection {
-    margin-top: 30px;
+    margin-top: px;
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 70px;
@@ -366,7 +423,7 @@ animation: typing 4s steps(18), blink .6s step-end infinite alternate;
 .accordinsection-1 p{
     margin-top: 130px;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     color: white;
     font-weight: bold;
 }
@@ -403,7 +460,7 @@ animation: typing 4s steps(18), blink .6s step-end infinite alternate;
 }
 
 .panel {
-    padding: 0 18px;
+    padding: 50px 50px;
     display: none;
     background-color: white;
     overflow: hidden;
@@ -478,7 +535,7 @@ iframe {
     padding-bottom: 200px;
 }
   .instagram {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.90)), url('https://media.licdn.com/dms/image/D5612AQF9AoGwvDUBKg/article-cover_image-shrink_720_1280/0/1701417551500?e=2147483647&v=beta&t=SpRbYmYnGL6Ty7ZvKUM7urRIdY4F6z-Vnor3GerAluA');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.90)), url('https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
