@@ -122,6 +122,8 @@ $(document).ready(function() {
 });
 
 
+
+
 $(document).ready(function () {
     var silder = $(".owl-carousel");
     silder.owlCarousel({
